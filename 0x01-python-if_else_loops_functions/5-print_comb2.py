@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-def fizzbuzz():
+for i in range(0, 99):
+    print('{}'.format(i), end=', ')
+print(i + 1)
