@@ -1,20 +1,21 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
-import sys
+from sys import argv
 
 if __name__ == '__main__':
 
-    av = sys.argv
-    if len(av) != 4:
+    if len(argv) != 4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
-    elif av[2] not in '+-*/':
+    elif argv[2] not in '+-*/':
         print("Unknown operator. Available operators: +, -, * and /")
     else:
+        a = int(argv[1])
+        b = int(argv[3])
         switcher = {
             '+': add,
             '-': sub,
             '*': mul,
             '/': div,
         }
-        print(switcher.get(av[2])(int(av[1]), int(av[3])))
+        print(switcher.get(argv[2])(a, b))
