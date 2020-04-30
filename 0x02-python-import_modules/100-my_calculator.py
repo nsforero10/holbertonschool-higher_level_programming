@@ -18,4 +18,4 @@ if __name__ == '__main__':
             '*': mul,
             '/': div,
         }
-        print(switcher.get(argv[2])(a, b))
+        print('{} {} {} = {}'.format(a, argv[2], b, switcher.get(argv[2])(a, b)))
