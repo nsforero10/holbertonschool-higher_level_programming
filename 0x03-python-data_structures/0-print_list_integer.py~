@@ -1,4 +1,0 @@
-#!/usr/bin/python3
-def prijt_list_integer(list=[]):
-    for elem in list:
-        print("{}".format(elem))
