@@ -3,5 +3,5 @@ def new_in_list(lis, i, elem):
     newl = list(lis)
     if i < 0 or i >= len(newl):
         return newl
-    new[i] = elem
+    newl[i] = elem
     return n
