@@ -1,3 +1,4 @@
+#!/usr/bin/python3g
 from sys import stderr
 
 
