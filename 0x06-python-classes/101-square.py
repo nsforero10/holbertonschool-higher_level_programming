@@ -1,10 +1,9 @@
-# !/usr/bin/python3
-""" Class Square"""
+#!/usr/bin/python3
+""" Class Square that defines a square"""
 
 
 class Square:
     """Class constructor"""
-
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
@@ -20,8 +19,6 @@ class Square:
         if value < 0:
             raise ValueError('size must be >= 0')
         self.__size = value
-
-    """Position getter"""
 
     @property
     def position(self):
@@ -51,15 +48,15 @@ class Square:
             print()
 
     def __str__(self):
-        _str = ''
+        str_print = ''
         if self.size != 0:
             if self.position[1] is not 0:
-                _str += '\n' * self.position[1]
+                str_print += '\n' * self.position[1]
             for ch in range(self.size):
-                _str += ' ' * self.position[0]
-                _str += '#' * self.size
+                str_print += ' ' * self.position[0]
+                str_print += '#' * self.size
                 if ch != self.__size - 1:
-                    _str += '\n'
+                    str_print += '\n'
         else:
-            _str = ''
-        return _str
+            str_print = ''
+        return str_print
