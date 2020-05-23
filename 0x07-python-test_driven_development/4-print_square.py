@@ -6,7 +6,7 @@
 
 def print_square(size):
     """
-    Fucntion that prints a square
+    Function that prints a square
     """
     if type(size) is not int:
         raise TypeError("size must be an integer")
