@@ -1,0 +1,30 @@
+Doc test 2-matrix_divide
+==========================================
+
+Import the function:
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+    
+Text argument:
+    >>> text_indentation('Software undergoes beta testing shortly? before it’s released. Beta is Latin for “still doesn’t work": Anonymous')
+    Software undergoes beta testing shortly?
+    <BLANKLINE>
+    before it’s released.
+    <BLANKLINE>
+    Beta is Latin for “still doesn’t work":
+    <BLANKLINE>
+    Anonymous
+
+No Arguments:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+    
+Multiple args
+    >>> text_indentation('Hello', 'World', 'Mom', "I'm", 'succeeding')
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 5 were given
+       
+No string arguments
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    TypeError: text must be a string
