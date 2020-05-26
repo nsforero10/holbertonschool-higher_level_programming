@@ -47,7 +47,7 @@ class Rectangle:
             return str_rep
         for i in range(self.height):
             str_rep += '#' * self.width
-            if  i < self.height - 1:
+            if i < self.height - 1:
                 str_rep += '\n'
         return str_rep
 
