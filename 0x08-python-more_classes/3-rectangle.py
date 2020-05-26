@@ -50,4 +50,3 @@ class Rectangle:
             if i < self.height - 1:
                 str_rep += '\n'
         return str_rep
-
