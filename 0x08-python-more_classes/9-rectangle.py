@@ -45,7 +45,7 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    @classmethodg
+    @classmethod
     def square(cls, size=0):
         return cls(size, size)
 
