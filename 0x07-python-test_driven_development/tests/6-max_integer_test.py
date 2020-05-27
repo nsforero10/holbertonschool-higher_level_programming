@@ -4,31 +4,41 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-
 class TestMaxInteger(unittest.TestCase):
-    """
-        Unit test for maxint
-    """
-    def average_case(self):
-        lis = [1, 2, 3, 4, 5]
-        self.assertEquals(max_integer(lis), 5)
+    """ Unit test class """
+    def test_ten_scale(self):
+        self.assertEqual(max_integer([10, 20, 30, 40]), 40)
+        self.assertEqual(max_integer([40, 20, 30, 10]), 40)
+        self.assertEqual(max_integer([10, 20, 77, 40, 7]), 77)
 
-    def none_case(self):
-        lis = []
-        self.assertEquals(max_integer(lis), None)
+    def test_negative_charge(self):
+        l = [-23, -48, -13, -7]
+        self.assertEqual(max_integer(l), -7)
 
-    def string_case(self):
-        lis = ['hello world']
-        self.assertEquals(max_integer(lis), 'h')
+    def test_alone(self):
+        l = [7]
+        self.assertEqual(max_integer(l), 7)
 
-    def different_types_case(self):
-        lis = ['1', 2, 3.4]
+    def test_none(self):
+        l = []
+        self.assertEqual(max_integer(l), None)
+
+    def test_float_charge(self):
+        l = [1.0, 2.0, 3.0, 7.0]
+        self.assertEqual(max_integer(l), 7.0)
+
+    def test_two_max_numbers(self):
+        l = [1, 2, 3, 7, 5, 7]
+        self.assertEqual(max_integer(l), 7)
+
+    def test_string(self):
+        l = "testify"
+        self.assertEqual(max_integer(l), 'y')
+
+    def test_mix_list(self):
+        l = ['T', 7, 3.0]
         with self.assertRaises(TypeError):
-            max_integer(lis)
-
-    def lessthanzero_case(self):
-        lis = [-1, -2, -3, -4, -5]
-        self.assertEquals(max_integer(lis), -1)
+            max_integer(l)
 
 
 if __name__ == '__main__':
