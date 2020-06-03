@@ -6,6 +6,7 @@
 
 class MyInt(int):
     """ Class that inherits form int """
+
     def __init__(self, value):
         self.value = value
 
