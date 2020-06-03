@@ -9,7 +9,7 @@ Importing the class from the module:
     >>> list.print_sorted()
     []
 
-    >> l = MyList()
+    >>> l = MyList()
     >>> l.append(10)
     >>> l.append(9)
     >>> l.append(8)
@@ -19,24 +19,13 @@ Importing the class from the module:
     >>> print(l)
     [10, 9, 8, 7, 6, 5]
     >>> l.print_sorted()
+    [5, 6, 7, 8, 9, 10]
 
     >>> list.append(-12)
     >>> list.append(-1)
     >>> print(list)
-    [1, 2, 3, -12, -1]
+    [-12, -1]
     >>> list.print_sorted()
-    [-12, -1, 1, 2, 3]
+    [-12, -1]
     >>> print(list)
-    [1, 2, 3, -12, -1]
-
-    >>> test_list.index(1)
-    0
-    >>> test_list.index('Holbie')
-    1
-    >>> test_list.index('c')
-    3
-
-    >>> list.print_sorted(1)
-    Traceback (most recent call last):
-    	      ...
-    TypeError: print_sorted() takes 1 positional argument but 2 were given
+    [-12, -1]
