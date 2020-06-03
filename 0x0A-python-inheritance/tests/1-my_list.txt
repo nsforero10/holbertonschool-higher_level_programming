@@ -29,6 +29,13 @@ Importing the class from the module:
     >>> print(list)
     [1, 2, 3, -12, -1]
 
+    >>> test_list.index(1)
+    0
+    >>> test_list.index('Holbie')
+    1
+    >>> test_list.index('c')
+    3
+
     >>> list.print_sorted(1)
     Traceback (most recent call last):
     	      ...
