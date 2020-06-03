@@ -1,12 +1,11 @@
-# !/usr/bin/python3
+#!/usr/bin/python3
 """
-100-my-int.py
+101-add_attribute.py
 """
 
 
 def add_attribute(obj, name, value):
-    """ Adds a attribute to a given object """
-    if hasattr(obj, '__dict__') is False:
+    """ Add attribute to an object """
+    if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
-    else:
-        setattr(obj, name, value)
+    setattr(obj, name, value)
