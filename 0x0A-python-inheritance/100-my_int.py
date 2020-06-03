@@ -8,9 +8,11 @@ class MyInt(int):
     """ Class that inherits form int """
     def __init__(self, value):
         self.value = value
-    """ change the value"""
+
     def __eq__(self, other):
+        """ change the value"""
         return self.value != other
-    """ change te value"""
+
     def __ne__(self, other):
+        """ change te value"""
         return self.value == other
