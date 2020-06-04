@@ -3,12 +3,18 @@
 9-add_item.py
 """
 from sys import argv
-save_json = __import__('7-load_to_json_file').load_from_json_file
-load_json = __import__('8-load_from_json_file').load_from_json_file
+from os import path
 
-try:
-    i = load_json('add_item.json')
-except FileNotFoundError:
-    i = []
-i.extend(argv[1:])
-save_json(i, 'add_item.json')
+save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+
+filename = "add_item.json"
+
+arg_list = []
+if path.isfile(filename):
+    arg_list = load_from_json_file(filename)
+
+for a in argv[1:]:
+    arg_list.append(a)
+
+save_to_json_file(arg_list, "add_item.json")
