@@ -1,2 +1,9 @@
 #!/usr/bin/python3
-def append_after(filename="", search_string="", new_string=""):
+"""
+10-class_to_json.py
+"""
+
+
+def class_to_json(obj):
+    """ class to json"""
+    return obj.__dict__
