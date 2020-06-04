@@ -3,6 +3,7 @@
 100-append_after.py
 """
 
+
 def append_after(filename="", search_string="", new_string=""):
     """
     appends the new string after below the search string
