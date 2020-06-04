@@ -6,10 +6,10 @@
 
 def read_lines(filename="", nb_lines=0):
     """ read the lines of a file"""
-    with open(filename, encoding='uft8') as f:
+    with open(filename, 'r',encoding='utf-8') as file:
         if nb_lines <= 0:
-            for ln in f:
-                print(ln, end='')
+            for line in file:
+                print(line, end="")
         else:
-            for ln in range(nb_lines):
-                print(f.readline(), end='')
+            for line in range(nb_lines):
+                print(file.readline(), end="")
