@@ -6,7 +6,7 @@ import json
 import csv
 
 
-class Base():
+class Base:
     """
     Base Class
     """
@@ -27,6 +27,7 @@ class Base():
             return json.dumps(list_dictionaries)
         else:
             return '[]'
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Save into a file"""
@@ -72,8 +73,8 @@ class Base():
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ saves into a csv"""
-        fname = cls.__name__ + ".csv"
-        with open(fname, 'w', newline='') as f:
+        f_name = cls.__name__ + ".csv"
+        with open(f_name, 'w', newline='') as f:
             if list_objs is None or list_objs == []:
                 f.write("[]")
 

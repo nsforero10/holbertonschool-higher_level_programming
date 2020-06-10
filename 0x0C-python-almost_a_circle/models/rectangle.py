@@ -77,10 +77,9 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints rectangle """
-        print('\n' * self.y)
+        print("\n" * self.y, end="")
         for i in range(self.height):
-            print(" " * self.x, end="")
-            print('#' * self.width)
+            print(" " * self.x + '#' * self.width)
 
     def __str__(self):
         """String representation"""
@@ -91,10 +90,9 @@ class Rectangle(Base):
         """Update a rectangle"""
         keys = ['id', 'width', 'height', 'x', 'y']
         if len(args):
-            for i in range(len(args)):
-                setattr(self,
-                        keys[i],
-                        args[i])
+            for i in range(0, len(args)):
+                if i < 4:
+                    setattr(self, keys[i], args[i])
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)

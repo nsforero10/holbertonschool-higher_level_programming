@@ -6,6 +6,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """ Square class"""
     def __init__(self, size, x=0, y=0, id=None):
         """Constructor"""
         super().__init__(size, size, x, y, id)
@@ -32,8 +33,9 @@ class Square(Rectangle):
         """ Update square class """
         if len(args):
             key = ['id', 'size', 'x', 'y']
-            for i in range(len(args)):
-                setattr(self, key[i], args[i])
+            for i in range(0, len(args)):
+                if i < 4:
+                    setattr(self, key[i], args[i])
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
