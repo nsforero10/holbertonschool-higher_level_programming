@@ -87,12 +87,14 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """Update a rectangle"""
-        keys = ['id', 'width', 'height', 'x', 'y']
+        """ Update rectangle instance """
         if len(args):
-            for i in range(0, len(args)):
-                if i < 4:
-                    setattr(self, keys[i], args[i])
+            i = 0
+            key = ['id', 'width', 'height', 'x', 'y']
+            for value in args:
+                if i < 5:
+                    setattr(self, key[i], value)
+                    i += 1
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
