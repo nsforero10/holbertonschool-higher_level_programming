@@ -1,4 +1,5 @@
 -- creates data base and its data talbe filled
+-- creates data base and its data talbe filled
 SELECT id,
     name
 FROM cities

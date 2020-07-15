@@ -1,4 +1,5 @@
 -- list shows 
+-- list shows 
 SELECT tv_genres.name,
     SUM(tv_show_ratings.rate) AS rating
 FROM tv_genres

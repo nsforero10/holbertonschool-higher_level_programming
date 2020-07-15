@@ -1,4 +1,5 @@
 -- list cities 
+-- list cities 
 SELECT cities.id,
     cities.name,
     states.name
