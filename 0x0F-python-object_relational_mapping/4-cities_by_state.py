@@ -11,7 +11,7 @@ if __name__ == "__main__":
     cr = db.cursor()
     cr.execute('SELECT cities.id, cities.name, states.name FROM cities\
         INNER JOIN states ON cities.state_id = states.id\
-        OERDER BY cities.id', (argv[4],))
+        ORDER BY cities.id', (argv[4],))
     states = cr.fetchall()
     for state in states:
         print(state)
