@@ -6,9 +6,9 @@ if __name__ == "__main__":
     from sys import argv
     import MySQLdb
     db = MySQLdb.connect(
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3],
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3],
         port=3306,
         host='localhost')
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
         'SELECT cities.name FROM cities\
         INNER JOIN states ON cities.state_id = states.id\
         WHERE states.name = %s \
-        ORDER BY cities.id ASC', (sys.argv[4], ))
+        ORDER BY cities.id ASC', (argv[4], ))
 
     cities = cursor.fetchall()
 
