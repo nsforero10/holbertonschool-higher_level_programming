@@ -1,20 +1,15 @@
 #!/usr/bin/python3
-'''
-List all state
-'''
+''' list all states from the database hbtn_0e_0_usa'''
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
+    from sys import argv
     import MySQLdb
-    from sys import arg
-    db = MySQLdb.connect(
-        user=argv[1],
-        password=argv[2],
-        db=argv[3],)
-    crs = db.cursor()
-    crs.execute('SELECT * FROM states ORDER BY state.id;')
-
-    states = crs.fetchall()
+    db = MySQLdb.connect(user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3])
+    cr = db.cursor()
+    cr.execute("SELECT * from states ORDER BY states.id")
+    states = cr.fetchall()
     for state in states:
         print(state)
     cr.close()
