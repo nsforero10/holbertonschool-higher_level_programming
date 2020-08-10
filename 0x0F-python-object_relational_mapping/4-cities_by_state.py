@@ -10,8 +10,7 @@ if __name__ == "__main__":
                          db=argv[3])
     cr = db.cursor()
     cr.execute('SELECT cities.id, cities.name, states.name FROM cities\
-        INNER JOIN states ON cities.state_id = states.id\
-        ORDER BY cities.id', (argv[4],))
+        JOIN states ON cities.state_id = states.id', (argv[4],))
     states = cr.fetchall()
     for state in states:
         print(state)
