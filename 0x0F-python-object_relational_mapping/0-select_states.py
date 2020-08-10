@@ -3,19 +3,19 @@
 List all state
 '''
 
-import MySQLdb
-import sys
 
 if __name__ == '__main__':
+    import MySQLdb
+    from sys import arg
     db = MySQLdb.connect(
-        user=sys.argv[1],
-        password=sys.argv[2],
-        db=sys.argv[3],
-        port=3306,
-        host='localhost')
+        user=argv[1],
+        password=argv[2],
+        db=argv[3],)
     crs = db.cursor()
-    crs.execute('select * from states order by.id asc;')
+    crs.execute('SELECT * FROM states ORDER BY state.id;')
 
     states = crs.fetchall()
     for state in states:
         print(state)
+    cr.close()
+    db.close()
