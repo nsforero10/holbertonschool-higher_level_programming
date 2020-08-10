@@ -13,9 +13,11 @@ if __name__ == "__main__":
         JOIN states ON cities.state_id = states.id', (argv[4],))
     states = cr.fetchall()
 
+    i = 0
     for state in states:
-        if state != states[0]:
+        if i != 0:
             print(", ", end="")
         print("%s" % state, end="")
+        i += 1
     cr.close()
     db.close()
