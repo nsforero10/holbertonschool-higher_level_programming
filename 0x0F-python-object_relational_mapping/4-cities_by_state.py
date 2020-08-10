@@ -19,5 +19,6 @@ if __name__ == "__main__":
             print(", ", end="")
         print("%s" % state, end="")
         i += 1
+    print('')
     cr.close()
     db.close()
