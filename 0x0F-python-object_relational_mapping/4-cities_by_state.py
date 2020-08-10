@@ -12,7 +12,10 @@ if __name__ == "__main__":
     cr.execute('SELECT cities.id, cities.name, states.name FROM cities\
         JOIN states ON cities.state_id = states.id', (argv[4],))
     states = cr.fetchall()
+
     for state in states:
-        print(state)
+        if state != states[0]:
+            print(", ", end="")
+        print("%s" % state, end="")
     cr.close()
     db.close()
