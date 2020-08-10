@@ -8,9 +8,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3],
-        port=3306,
-        host='localhost')
+        db=sys.argv[3])
 
     cursor = db.cursor()
     cursor.execute(
@@ -21,7 +19,6 @@ if __name__ == "__main__":
 
     for city in cities:
         print(city)
-    print("")
 
     cursor.close()
     db.close()
