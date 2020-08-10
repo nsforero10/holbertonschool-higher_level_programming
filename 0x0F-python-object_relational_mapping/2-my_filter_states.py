@@ -9,10 +9,10 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     cr = db.cursor()
-    cr.execute("SELECT * from states \
-        WHERE name LIKE {}\
-        COLLATE Latin1_General_CS \
-        ORDER BY  states.id;".format(argvp[4]))
+    cr.execute('SELECT * from states \
+        WHERE name LIKE "{}"\
+        COLLATE latin1_general_cs \
+        ORDER BY states.id;'.format(argvp[4]))
     states = cr.fetchall()
     for state in states:
         print(state)
