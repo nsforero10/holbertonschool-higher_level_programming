@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """fetches https://intranet.hbtn.io/status"""
-if __name___ == '__main__':
+if __name__ == '__main__':
     import urllib.request as request
     with request.urlopen('http://intranet.hbtn.io/status') as response:
         html = response.read()
