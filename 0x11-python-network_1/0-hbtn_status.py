@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''fetches https://intranet.hbtn.io/statu'''
+import urllib.request as request
 if __name__ == '__main__':
-    import urllib.request as request
     with request.urlopen('http://intranet.hbtn.io/status') as res:
         html = res.read()
         print('Body response:')
