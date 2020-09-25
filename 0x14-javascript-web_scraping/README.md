@@ -60,4 +60,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Nicolas Forero A.** - [nsforero10](ad6sJ7Q6)
+* **Nicolas Forero A.** - [nsforero10](github.com/nsforero10)
